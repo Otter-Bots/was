@@ -1,0 +1,5 @@
+# Yarn files
+.yarn/install-state.gz
+.yarn/build-state.yml
+# Dependency directories
+node_modules/
