@@ -3,3 +3,7 @@
 .yarn/build-state.yml
 # Dependency directories
 node_modules/
+# ENV files
+.env
+# Build files
+dist/
