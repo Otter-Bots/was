@@ -1,14 +1,14 @@
-import express from "express";
-import "dotenv/config";
-import cors from "cors";
-import fetch from "node-fetch";
+import express from "express"; // Imports Express
+import "dotenv/config"; // Imports dotenv/config
+import cors from "cors"; // Import cors
+import fetch from "node-fetch"; // Import node-fetch from fetch
 const app = express()
 app.use(cors())
 app.get('/', (_req, res) => {
-  res.send('The website authentication service (WAS) for Otter Bots.') // Sends
+  res.send('The website authentication service (WAS) for Otter Bots.') // Sends message
 })
 
-// Discord Stuff
+// Discord BS
 app.get('/discord/', (_req, res) => {
   res.sendFile('discord-callback.html', { root: `${process.cwd()}/html/` })
 })
@@ -23,11 +23,11 @@ app.get('/discord/finishAuth', (req, res) => {
 			.then(result => result.json())
 			.then(response => {
 				const { username, discriminator } = response;
-        console.log(`Authenticated as ${username}#${discriminator}.`) // Logs
-        res.send(`Authenticated as ${username}#${discriminator}.`)  // Sends
+        console.log(`Authenticated as ${username}#${discriminator}.`) // Logs that they are authenticated
+        res.send(`Authenticated as ${username}#${discriminator}.`)  // Sends that they are authenticated
 			})
 			.catch(console.error);
 })
 app.listen(process.env.PORT, () => {
-  console.log(`app listening on port ${process.env.PORT}!`)
+  console.log(`App listening on port ${process.env.PORT}!`)
 }
