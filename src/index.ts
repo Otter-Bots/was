@@ -5,9 +5,10 @@ import fetch from "node-fetch";
 const app = express()
 app.use(cors())
 app.get('/', (_req, res) => {
-  res.send('The website authentication service (WAS) for Otter Bots.')
+  res.send('The website authentication service (WAS) for Otter Bots.') // Sends
 })
-// Discord BS
+
+// Discord Stuff
 app.get('/discord/', (_req, res) => {
   res.sendFile('discord-callback.html', { root: `${process.cwd()}/html/` })
 })
@@ -22,8 +23,8 @@ app.get('/discord/finishAuth', (req, res) => {
 			.then(result => result.json())
 			.then(response => {
 				const { username, discriminator } = response;
-        console.log(`Authenticated as ${username}#${discriminator}.`)
-        res.send(`Authenticated as ${username}#${discriminator}.`)
+        console.log(`Authenticated as ${username}#${discriminator}.`) // Logs
+        res.send(`Authenticated as ${username}#${discriminator}.`)  // Sends
 			})
 			.catch(console.error);
 })
