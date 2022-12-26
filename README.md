@@ -1,2 +1,2 @@
-# was (website auth server)
+# WAS (website auth server)
 Authentication server for use with the website.
