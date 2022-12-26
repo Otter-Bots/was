@@ -13,7 +13,7 @@ app.get('/discord/', (_req, res) => {
 })
 app.get('/discord/finishAuth', (req, res) => {
   const { access_token, token_type} = req.query;
-  // res.send(`Access Token: ${access_token} Token Type: ${token_type}`)
+  // res.send(`Access Token: ${access_token} Token Type: ${token_type}.`)
   fetch('https://discord.com/api/users/@me', {
 			headers: {
 				authorization: `${token_type} ${access_token}`,
@@ -22,8 +22,8 @@ app.get('/discord/finishAuth', (req, res) => {
 			.then(result => result.json())
 			.then(response => {
 				const { username, discriminator } = response;
-        console.log(`Authenticated as ${username}#${discriminator}`)
-        res.send(`Authenticated as ${username}#${discriminator}`)
+        console.log(`Authenticated as ${username}#${discriminator}.`)
+        res.send(`Authenticated as ${username}#${discriminator}.`)
 			})
 			.catch(console.error);
 })
