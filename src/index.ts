@@ -22,8 +22,8 @@ app.get('/discord/finishAuth', (req, res) => {
 			.then(result => result.json())
 			.then(response => {
 				const { username, discriminator } = response;
-        console.log(`Authed as ${username}#${discriminator}`)
-        res.send(`Authed as ${username}#${discriminator}`)
+        console.log(`Authenticated as ${username}#${discriminator}`)
+        res.send(`Authenticated as ${username}#${discriminator}`)
 			})
 			.catch(console.error);
 })
