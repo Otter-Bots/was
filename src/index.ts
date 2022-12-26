@@ -5,7 +5,7 @@ import fetch from "node-fetch";
 const app = express()
 app.use(cors())
 app.get('/', (_req, res) => {
-  res.send('The authentication service for Otter Bots.')
+  res.send('The website authentication service for Otter Bots.')
 })
 // Discord BS
 app.get('/discord/', (_req, res) => {
@@ -29,13 +29,4 @@ app.get('/discord/finishAuth', (req, res) => {
 })
 app.listen(process.env.PORT, () => {
   console.log(`app listening on port ${process.env.PORT}!`)
-})
-
-
-
-
-
-
-
-
-
+}
