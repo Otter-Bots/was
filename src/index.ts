@@ -29,5 +29,5 @@ app.get('/discord/finishAuth', (req, res) => {
 			.catch(console.error);
 })
 app.listen(process.env.PORT, () => {
-  console.log(`App listening on port ${process.env.PORT}!`)
+  console.log(`App listening on port ${process.env.PORT}!`) // Logs that the app is listening
 }
