@@ -1,7 +1,7 @@
-import express from "express"; // Imports Express
+import express from "express"; // Imports express
 import "dotenv/config"; // Imports dotenv/config
-import cors from "cors"; // Import cors
-import fetch from "node-fetch"; // Import node-fetch from fetch
+import cors from "cors"; // Imports cors
+import fetch from "node-fetch"; // Imports node-fetch from fetch
 const app = express()
 app.use(cors())
 app.get('/', (_req, res) => {
